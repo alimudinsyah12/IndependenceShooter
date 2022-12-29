@@ -15,10 +15,10 @@
 - Refrisca Lintang Pramesti (2103164)
 
 # Independence Shooter Game🏃🏻‍♂️🚀
-Permainan ini merupakan game ber-genre shooter dengan menggunakan konsep bangsa Indonesia saat zaman penjajahan. Pada saat zaman penjajahan, Indonesia menyerang menggunakan senjata berupa bambu runcing. Misi permainan ini adalah mengalahkan musuh dengan menembak lalu mempertahankan health point player agar tidak berkurang dan habis. Player harus bisa menghindari musuh agar tidak terkena tembakan serta tidak tertabrak oleh musuh. Musuh-musuh tersebut yang nantinya akan menyebabkan berkurangnya health point player dan menyebabkan player mati.
+Permainan ini merupakan game ber-genre shooter yang dilatarbelakangi oleh bangsa Indonesia saat zaman penjajahan. Pada saat zaman penjajahan, Indonesia menyerang menggunakan senjata berupa bambu runcing. Misi permainan ini adalah mengalahkan musuh dengan menembak lalu mempertahankan health point player agar tidak berkurang dan habis. Player harus bisa menghindari musuh agar tidak terkena tembakan serta tidak tertabrak oleh musuh. Musuh-musuh tersebut yang nantinya akan menyebabkan berkurangnya health point player dan menyebabkan player mati.
 
-# Player Character👩🏻‍💻👩‍💻
-Player dalam permainan ini dapat dimainkan oleh 1 player maupun 2 player sesuai keinginan pemain. Player 1, jika dimainkan oleh 1 orang dan 2 player jika dimainkan oleh 2 orang. Objek player yang kami gunakan adalah karakter pahlawan Indonesia yang melawan penjajah-penjajah Indonesia. Karakter ini dibedakan berdasarkan Health Point para pahlawan. Player juga bisa memilih karakter yang telah disediakan. Diantaranya:
+# Player Characters👩🏻‍💻👩‍💻
+Player dalam permainan ini dapat dimainkan oleh 1 player pada mode singleplayer maupun 2 player pada mode multi player. Objek player yang kami gunakan adalah karakter pahlawan Indonesia yang melawan penjajah-penjajah Indonesia. Karakter ini dibedakan berdasarkan Health Point para pahlawan. Player juga bisa memilih karakter yang telah disediakan. Diantaranya:
 1. Jenderal Soedirman: Soedirman yang dipandang sebagai tokoh masyarakat diminta untuk memimpin sebuah tim di Cilacap dalam menghadapi serangan Jepang.
 2. Pattimura: Ia adalah pahlawan yang berjuang untuk Maluku melawan VOC Belanda. Sebelumnya Pattimura adalah mantan sersan di militer Inggris.
 3. Bung Tomo: Beliau adalah sosok pahlawan yang dikenal sebagai pembangkit semangat pemuda Indonesia untuk melawan penjajah Belanda.
@@ -26,7 +26,7 @@ Player dalam permainan ini dapat dimainkan oleh 1 player maupun 2 player sesuai 
 5. Pangeran Diponegoro: Pangeran Diponegoro dikenal sebagai pahlawan yang melawan penjajah di Tanah Jawa.
 
 # Level📈
-Level yang kami sediakan terdapat 3 level sesuai tingkat kesusahan game. Player dapat memilih level sesuai keinginan. Tingkat kesusahan game yang kami gunakan adalah nama bangsa-bangsa yang pernah. Level juga menentukkan cepat lambatnya musuh dalam menyerang dan banyak sedikitnya jumlah musuh. Semakin susah level yang dipilih maka musuh akan bergerak semakin cepat dan jumlahnya semakin banyak. 3 level yang kami sediakan diantaranya:
+Level yang kami sediakan terdiri dari 3 level sesuai tingkat kesusahan game. Player dapat memilih level sesuai keinginan. Tingkat kesusahan game yang kami gunakan adalah nama bangsa-bangsa yang pernah menjajah. Level juga menentukkan cepat lambatnya musuh dalam menyerang dan banyak sedikitnya jumlah musuh. Semakin susah level yang dipilih maka musuh akan bergerak semakin cepat dan jumlahnya semakin banyak. 3 level yang kami sediakan diantaranya:
 1. Level Portugis (Easy): Portugis merupakan negara yang pertama kali menjajah Indonesia pada 1509-1595. Mulanya, Portugis memang sudah mempunyai jaringan perdagangan yang besar di Malaka. Namun, Alfonso de Albuquerque mengirim ekspedisi yang dipimpin Antonio de Abreu untuk mencari daerah kaya rempah-rempah di Nusantara.
 2. Level Belanda (Medium): Penjajahan dilakukan selama 350 tahun dan menjadi penjajahan terlama di Indonesia. Alasan utama penjajahan Belanda adalah untuk menguasai wilayah penghasil rempah-rempah.
 3. Level Jepang (Hard): Jepang menjajah Indonesia selama 3,5 tahun. Jepang bahkan menerapkan sistem kerja paksa alias romusha terhadap rakyat Indonesia. Selain itu, Jepang juga membangun organisasi militer dan memaksa rakyat untuk ikut agar bisa menjadi sumber daya perang melawan Amerika Serikat dan sekutunya di Perang Dunia II.

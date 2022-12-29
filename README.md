@@ -4,7 +4,7 @@
 | [👨‍💻 Player Character](#player-character) | [📈 Level](#level) | [👾 Enemy](#enemy) | [💗 HP](#hp) |
 | ------------------------- | -------- | ----------- | ----------- |
 
-# Hi, there we are team 3 - IndependenceGameShooter👋
+# Hi, We are from team 3 - IndependenceGameShooter👋
 
 # Anggota kelompok🙋🏻‍♀️🙋🏻‍♂️:
 

@@ -1,4 +1,5 @@
 # IndependenceGameShooter
+![mainmenu](https://user-images.githubusercontent.com/118440652/209903274-2b7b5ae6-e931-41a4-9912-4b90814af370.PNG)
 
 | [👨‍💻 Player](#player) | [📈 Level](#level) | [👾 Enemy](#enemy) | [💗 HP](#hp) |
 | --------------- | -------- | ----------- | ----------- |
@@ -16,7 +17,7 @@
 # Independence Shooter Game🏃🏻‍♂️🚀
 Permainan ini merupakan game ber-genre shooter dengan menggunakan konsep bangsa Indonesia saat zaman penjajahan. Pada saat zaman penjajahan, Indonesia menyerang menggunakan senjata berupa bambu runcing. Misi permainan ini adalah mengalahkan musuh dengan menembak lalu mempertahankan health point player agar tidak berkurang dan habis. Player harus bisa menghindari musuh agar tidak terkena tembakan serta tidak tertabrak oleh musuh. Musuh-musuh tersebut yang nantinya akan menyebabkan berkurangnya health point player dan menyebabkan player mati.
 
-# Player👩🏻‍💻👩‍💻
+# Player Character👩🏻‍💻👩‍💻
 Player dalam permainan ini dapat dimainkan oleh 1 player maupun 2 player sesuai keinginan pemain. Player 1, jika dimainkan oleh 1 orang dan 2 player jika dimainkan oleh 2 orang. Objek player yang kami gunakan adalah karakter pahlawan Indonesia yang melawan penjajah-penjajah Indonesia. Karakter ini dibedakan berdasarkan Health Point para pahlawan. Player juga bisa memilih karakter yang telah disediakan. Diantaranya:
 1. Jenderal Soedirman: Soedirman yang dipandang sebagai tokoh masyarakat diminta untuk memimpin sebuah tim di Cilacap dalam menghadapi serangan Jepang.
 2. Pattimura: Ia adalah pahlawan yang berjuang untuk Maluku melawan VOC Belanda. Sebelumnya Pattimura adalah mantan sersan di militer Inggris.
@@ -34,5 +35,35 @@ Level yang kami sediakan terdapat 3 level sesuai tingkat kesusahan game. Player 
 Enemy dalam game ini berupa karakter penjajah sesuai tingkat level yang dipilih. Enemy menggunakan senjata untuk menyerang player. Jika enemy berhasil menyerang player dengan tembakan mengenai player dan menabrak player, maka player akan kekurangan HP dan mati. Enemy akan mati jika player menembak dan mengenai enemy yang lama kelamaan health point enemy akan berkurang dan habis.
 
 # HP💖
-1. Health Point player: Health Point untuk 1 player maupun 2 player berjumlah sama yaitu    . Health point player tidak akan bertambah tetapi akan berkurang. Dalam game ini player diminta untuk mempertahankan health point agar tidak berkurang dan habis. Health point player akan berkurang jika player terkena tembakan oleh musuh. Jumlah health point yang berkurang adalah sama dalam setiap levelnya. Jika level semakin susah maka health pont yang berkurang akan semakin kecil.
-2. Health Point Enemy: Health Point untuk enemy berjumlah    . Health Point tidak akan bertambah tetapi berkurang. Berkurangnya health point sesuai tembakan player yang mengenai musuh. Susah level yang dipilih, semakin kecil health point yang berkurang.
+1. Health Point player: Health Point untuk 1 player maupun 2 player jumlahnya berbeda-beda tergantung dengan character yang dipilih. Health point player tidak akan bertambah tetapi akan berkurang. Dalam game ini player diminta untuk mempertahankan health point agar tidak berkurang dan habis. Health point player akan berkurang jika player terkena tembakan oleh musuh. Jumlah health point yang berkurang adalah sama dalam setiap levelnya. Jika level semakin susah maka health pont yang berkurang akan semakin kecil.
+- Bung Tomo: 85 HP
+- Pangeran Diponegoro: 95 HP
+- Sultan Hasanuddin: 80 HP
+- Kapitan Pattimura: 90 HP
+- Jenderal Soedirman: 75 HP
+2. Health Point Enemy: Health Point untuk enemy jumlahnya bebebeda-beda tergantung dengan enemy yang dipilih oleh player. Health Point tidak akan bertambah tetapi berkurang. Berkurangnya health point sesuai tembakan player yang mengenai musuh. Susah level yang dipilih, semakin kecil health point yang berkurang.
+- Portugis: 50 HP
+- Belanda: 75 HP
+- Jepang: 100 HP
+
+# Game Over👎
+Saat player gagal dalam menyelesaikan misi dan tidak mencapai score yang dituju maka game akan selesai (game over).
+
+# Screenshots🌆
+## Main Menu
+![mainmenu](https://user-images.githubusercontent.com/118440652/209903462-ccc3af46-76df-4e6b-b060-b24861e4fc69.PNG)
+
+## Players
+![player mode](https://user-images.githubusercontent.com/118440652/209903496-ddfc7b9c-bdb7-4e0a-b5a3-63d9ba32ace3.PNG)
+
+![player](https://user-images.githubusercontent.com/118440652/209903508-dc4b1c91-7b16-45b4-904d-f53d12fb4ec3.PNG)
+
+## Enemy
+![enemy](https://user-images.githubusercontent.com/118440652/209903688-8b4eae37-9373-440e-b765-19cb12a9d876.PNG)
+
+
+## Gameplay
+![GamePlayMP](https://user-images.githubusercontent.com/118440652/209903557-696f2d0f-9a2a-466d-9644-708d6309448a.PNG)
+
+## Game Over
+![gameoversp](https://user-images.githubusercontent.com/118440652/209904020-55bd90f0-67db-4035-8f1b-5d2b483cea9a.PNG)

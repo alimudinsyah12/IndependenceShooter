@@ -2,7 +2,7 @@
 ![mainmenu](https://user-images.githubusercontent.com/118440652/209903274-2b7b5ae6-e931-41a4-9912-4b90814af370.PNG)
 
 | [👨‍💻 Player Character](#player-character) | [📈 Level](#level) | [👾 Enemy](#enemy) | [💗 HP](#hp) |
-| ------------------------- | -------- | ----------- | ----------- |
+| -------------------------- | -------- | ----------- | ----------- |
 
 # Hi, We are team 3 - IndependenceGameShooter👋
 

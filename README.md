@@ -47,7 +47,7 @@ Enemy dalam game ini berupa karakter penjajah sesuai tingkat level yang dipilih.
 - Jepang: 100 HP
 
 # Game Over👎
-Saat player gagal dalam menyelesaikan misi dan tidak mencapai score yang dituju maka game akan selesai (game over).
+Game over akan muncul saat player gagal dalam menyelesaikan misi dan tidak bisa mempertahankan health point player maka game akan selesai (game over). Ketika player telah game over, game akan mulai dari awal permainan saat score bernilai 0.
 
 # Screenshots🌆
 ## Main Menu

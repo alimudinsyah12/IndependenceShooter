@@ -1,10 +1,10 @@
-# IndependenceGameShooter
+# IndependenceShooter
 ![mainmenu](https://user-images.githubusercontent.com/118440652/209903274-2b7b5ae6-e931-41a4-9912-4b90814af370.PNG)
 
-| [👨‍💻 Player Characters](#player-characters) | [📈 Level](#level) | [👾 Enemy](#enemy) | [💗 HP](#hp) |
-| -------------------------- | -------- | ----------- | ----------- |
+| [👨‍💻 Player Characters](#player-characters) | [📈 Level](#level) | [👾 Enemy](#enemy) | [💗 HP](#hp) | [👎 Game Over](#game-over) | [🌆 Screenshots](#screenshots) |
+| -------------------------- | -------- | ----------- | ----------- | ----------- | ----------- |
 
-# Hi, We are team 3 - IndependenceGameShooter👋
+# Hi, We are team 3 - IndependenceShooter👋
 
 # Anggota kelompok🙋🏻‍♀️🙋🏻‍♂️:
 

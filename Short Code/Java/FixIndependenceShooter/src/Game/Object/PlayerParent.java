@@ -4,7 +4,7 @@
  */
 package Game.object;
 
-import java.awt.Color;
+
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.geom.AffineTransform;
@@ -44,11 +44,12 @@ public class PlayerParent extends HpRender{
         }
         this.angle = angle;
     }
-        public void draw(Graphics2D g2){
+    
+    public void draw(Graphics2D g2){
         AffineTransform oldTransform = g2.getTransform();
-        g2.translate(getX(),getY());
+        g2.translate(x,y);
         AffineTransform tran = new AffineTransform();
-        tran.rotate(Math.toRadians(getAngle()), getPLAYER_SIZE()/2, getPLAYER_SIZE()/2);
+        tran.rotate(Math.toRadians(angle), PLAYER_SIZE/2, PLAYER_SIZE/2);
         g2.drawImage(image, tran, null);
         hpRender(g2, getShape(), getY());
         g2.setTransform(oldTransform);
@@ -77,9 +78,6 @@ public class PlayerParent extends HpRender{
         return angle;
     }
     
-    public Image getImage() {
-        return image;
-    }
     public static double getPLAYER_SIZE() {
         return PLAYER_SIZE;
     }

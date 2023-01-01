@@ -1,0 +1,26 @@
+
+
+Version:	3.50
+CmdLine:	D:\kerjaan\Java\FixIndependenceShooter\dist\Independence Shooter.exe --l4j-debug
+JNI:		No
+WOW64:		Yes
+Working dir:	D:\kerjaan\Java\FixIndependenceShooter\dist\.
+Requires JDK:	Yes
+Requires 64-Bit: Yes
+Java min ver:	1.004.000
+Java max ver:	
+JRE paths:	jre
+Check launcher:	D:\kerjaan\Java\FixIndependenceShooter\dist\jre\bin\javaw.exe (not found)
+64-bit search:	SOFTWARE\JavaSoft\Java Development Kit...
+64-bit search:	SOFTWARE\JavaSoft\JDK...
+Check:		SOFTWARE\JavaSoft\JDK\18.0.1.1
+Warning:	formatJavaVersion() too many parts added.
+Version string: 1.018.000_001 / 64-Bit (OK)
+Check launcher:	C:\Program Files\Java\jdk-18.0.1.1\bin\javaw.exe (OK)
+Check javac:	C:\Program Files\Java\jdk-18.0.1.1\bin\javac.exe (OK)
+Match:		1.018.000_001
+Runtime used:	1.018.000_001 (64-bit)
+Launcher:	C:\Program Files\Java\jdk-18.0.1.1\bin\javaw.exe
+Launcher args:	-jar "D:\kerjaan\Java\FixIndependenceShooter\dist\Independence Shooter.exe"
+Args length:	75/32768 chars
+Exit code:	0

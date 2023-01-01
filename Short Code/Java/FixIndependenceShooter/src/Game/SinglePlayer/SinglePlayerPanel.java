@@ -37,7 +37,7 @@ import javax.swing.JComponent;
  * @author aimgs
  */
 public class SinglePlayerPanel extends JComponent {
-    private SinglePlayerFrame parentWindow;
+    private final SinglePlayerFrame parentWindow;
     private Graphics2D g2;
     private BufferedImage image;
     private KeyInput keyInput;
@@ -80,7 +80,7 @@ public class SinglePlayerPanel extends JComponent {
         this.parentWindow = mainWindow;
     }
     
-    public void start( int level, int firstPlayer, String firstName){
+    public void start(int level, int firstPlayer, String firstName){
         width = getWidth();
         height = getHeight();
         background =new ImageIcon(getClass().getResource("/image/Background/backgroundGame.png")).getImage();
@@ -123,7 +123,6 @@ public class SinglePlayerPanel extends JComponent {
         
         initObjectGame();
         initKeyboard();
-        initKeyboard3();
         initBullets();
         
             thread.start();
@@ -277,17 +276,6 @@ public class SinglePlayerPanel extends JComponent {
         }).start();
     }
     
-    private void resetGame(){
-        score=0;
-        armies.clear();
-        bullets.clear();
-        tanks.clear();
-        tBullets.clear();
-        player.reset();
-        
-        bgMusic.play();
-        player.changeLocation(25,225);
-    }
     private void initKeyboard(){
         keyInput = new KeyInput();
         requestFocus();
@@ -396,7 +384,7 @@ public class SinglePlayerPanel extends JComponent {
                     
                     for(int i = 0; i <tBullets.size(); i++){
                         TankBullet tBullet = tBullets.get(i);
-                        if(tBullets != null){
+                        if(tBullet != null){
                             tBullet.update();
                             if (!tBullet.check(width, height)){
                                  tBullets.remove(tBullet);
@@ -413,51 +401,6 @@ public class SinglePlayerPanel extends JComponent {
         }).start();
     }
     
-    
-    
-    private void initKeyboard3(){
-        keyInput = new KeyInput();
-        requestFocus();
-        addKeyListener(new KeyAdapter(){
-            @Override
-            public void keyPressed(KeyEvent e){
-                int key = e.getKeyCode();
-                 if (key==KeyEvent.VK_ENTER){
-                    keyInput.setKey_enter(true);
-                }else if (key==KeyEvent.VK_ESCAPE){
-                    keyInput.setKey_esc(true);
-                }
-            }
-            
-            @Override
-            public void keyReleased(KeyEvent e){
-                int key = e.getKeyCode();
-                if (key==KeyEvent.VK_ENTER){
-                    keyInput.setKey_enter(false);
-                }else if (key==KeyEvent.VK_ESCAPE){
-                    keyInput.setKey_esc(false);
-                }
-            }
-        });
-        
-        new Thread(new Runnable(){
-            @Override
-            public void run(){
-
-                while(start){
-                    if(!player.getAlive()){
-                        if(keyInput.isKey_enter()){
-                            resetGame();
-                        }
-
-                    }
-                    
-                    
-                    sleep(5);
-                }
-            }
-        }).start();
-    }
     
     private void initBullets(){
         bullets = new ArrayList<>();
@@ -542,7 +485,6 @@ public class SinglePlayerPanel extends JComponent {
                 area.intersect(army.getShape());
                 
                 if (!area.isEmpty()){
-                    double armyHp = army.getHP();
                     if(!army.updateHP(player.getHP())){
                      armies.remove(army);
                        if(cLevel==1){
@@ -698,11 +640,29 @@ public class SinglePlayerPanel extends JComponent {
         }
         
     }
+    
+    private void render(){
+       Graphics g = getGraphics();
+       if(image!=null){
+         g.drawImage(image, 0, 0, null); 
+         g.dispose();
+       }
+       
+       
+    }
+    public void sleep(long speed){
+        try{
+            Thread.sleep(speed);
+            
+        }catch(InterruptedException ex){
+            System.err.println(ex);
+        }
+    }
     private void gameOver(){
         if(!player.getAlive()){
             bgMusic.stop();
             merdeka.stop();
-            start=false;
+            //start=false;
             
             LeaderboardDAO dao = new LeaderboardDAO();
             Leaderboard hs = dao.getSP(1);
@@ -781,18 +741,6 @@ public class SinglePlayerPanel extends JComponent {
            
         }
     }
-    private void render(){
-       Graphics g = getGraphics();
-       g.drawImage(image, 0, 0, null);
-       g.dispose();
-    }
-    public void sleep(long speed){
-        try{
-            Thread.sleep(speed);
-            
-        }catch(InterruptedException ex){
-            System.err.println(ex);
-        }
-    }
+    
     
 }

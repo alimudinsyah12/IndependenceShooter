@@ -87,7 +87,9 @@ public class LeaderboardPanel extends JPanel implements ActionListener {
               
               g2.setColor(Color.BLACK);
               g2.setFont(new Font("Arcade Normal",Font.PLAIN,12));
+              
               g2.drawString(String.valueOf(i+1)+".",418,249+(i*30));
+              
               if("".equals(r.getName())){
                   g2.drawString("No Name",460,249+(i*30)); 
               }else{

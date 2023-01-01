@@ -24,7 +24,7 @@ public class SinglePlayerFrame extends JFrame {
         this.setLayout(new BorderLayout());
         
         SinglePlayerPanel spp = new SinglePlayerPanel(this);
-        add(spp);
+        this.add(spp);
         addWindowListener (new WindowAdapter(){
             @Override
             public void windowOpened(WindowEvent e){

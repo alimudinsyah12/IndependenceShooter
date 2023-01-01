@@ -4,7 +4,7 @@
  */
 package Game.object;
 
-import java.awt.Color;
+
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Rectangle;
@@ -20,7 +20,7 @@ import javax.swing.ImageIcon;
  */
 public class TankBullet extends EnemyParent{
     private final Image image;
-    private final Area enemyShap;
+    private final Area tBulletShap;
 
     public TankBullet(int setAp) {
         super(setAp, setAp);
@@ -31,8 +31,8 @@ public class TankBullet extends EnemyParent{
         p.lineTo(70, 31);
         p.lineTo(40, 40);
         p.lineTo(70, 20);
-        enemyShap= new Area(p);
-        this.setSpeed(1.5f);
+        tBulletShap= new Area(p);
+        setSpeed(1.5f);
     }
     @Override
         public void update(){
@@ -60,7 +60,7 @@ public class TankBullet extends EnemyParent{
         AffineTransform afx = new AffineTransform();
         afx.translate(getX(),getY());
         afx.rotate(Math.toRadians(getAngle()), getENEMY_SIZE() / 2, getENEMY_SIZE() / 2);
-        return  new Area(afx.createTransformedShape(enemyShap));
+        return  new Area(afx.createTransformedShape(tBulletShap));
     }
     public boolean check (int width, int height){
         Rectangle size = getShape().getBounds();

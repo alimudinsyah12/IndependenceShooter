@@ -78,11 +78,13 @@ public class HistoryPanel extends JPanel implements ActionListener {
               Leaderboard q = dao.getHstSP(i); 
               
               g2.drawString(String.valueOf(i)+".",25,233+(j*30));
+              
               if("".equals(q.getName())){
                  g2.drawString("No Name",100,233+(j*30)); 
               }else{
                   g2.drawString(q.getName(),100,233+(j*30));
               }
+              
               g2.drawString(String.valueOf(q.getScore()),260,233+(j*30));
              
               if("PRT".equals(q.getLevel())){
@@ -92,15 +94,20 @@ public class HistoryPanel extends JPanel implements ActionListener {
               }else if("JPN".equals(q.getLevel())){
                   g2.drawImage(japanFlag, 340,217+(j*30), null);
               }
+              
               j++;
             }
+        
         for(int i=lastmp;i>lastmp-10;i--){
+            
             LeaderboardMP r = dao.getHstMP(i); 
             g2.setColor(Color.BLACK);
               g2.setFont(new Font("Arcade Normal",Font.PLAIN,12));
+              
               g2.drawString(String.valueOf(i)+".",415,233+(k*30));
+              
               if("".equals(r.getName())){
-                 g2.drawString("No Name",100,233+(j*30)); 
+             g2.drawString("No Name",500,233+(k*30)); 
               }else{
                  g2.drawString(r.getName(),500,233+(k*30)); 
               }
@@ -120,6 +127,7 @@ public class HistoryPanel extends JPanel implements ActionListener {
               }else if("JPN".equals(r.getLevel())){
                   g2.drawImage(japanFlag, 838,217+(k*30), null);
               }
+              
               k++;
         }
         

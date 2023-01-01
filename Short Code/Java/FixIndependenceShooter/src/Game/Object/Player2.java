@@ -17,14 +17,14 @@ public class Player2 extends PlayerParent {
    
     public Player2(int setHp){
         super(setHp,setHp);
-        this.setImage("/image/GameAsset/player2.png");
+        setImage("/image/GameAsset/player2.png");
         Path2D p = new Path2D.Double();
         p.moveTo(30,20);
         p.lineTo(30,5);
         p.lineTo(getPLAYER_SIZE(), getPLAYER_SIZE()/2);
         p.lineTo(30, getPLAYER_SIZE()-10);
         p.lineTo(30, getPLAYER_SIZE());
-        this.setPlayerShap (new Area(p));
+        setPlayerShap (new Area(p));
     }
     
 

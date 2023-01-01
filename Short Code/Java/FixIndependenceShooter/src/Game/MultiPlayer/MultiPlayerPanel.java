@@ -13,11 +13,11 @@ import Game.object.Bullet;
 import Game.object.Bullet2;
 import Game.object.Effect;
 import Game.object.Army;
-import Sound.Sound;
-import Game.object.Player;
-import Game.object.Player2;
 import Game.object.Tank;
 import Game.object.TankBullet;
+import Game.object.Player;
+import Game.object.Player2;
+import Sound.Sound;
 import Game.keyInput.KeyInput;
 import GameOver.GameOverFrame;
 
@@ -44,7 +44,7 @@ import javax.swing.JComponent;
  */
 public class MultiPlayerPanel extends JComponent {
     
-    private MultiPlayerFrame parentWindow;
+    private final MultiPlayerFrame parentWindow;
     private Graphics2D g2;
     private BufferedImage image;
     private KeyInput keyInput;
@@ -68,6 +68,7 @@ public class MultiPlayerPanel extends JComponent {
     //Game FPS
     private final int FPS = 60;
     private final int TARGET_TIME = 1000000000/FPS;
+    
     private int cLevel;
     private int pickPlayer1;
     private int pickPlayer2;
@@ -135,7 +136,6 @@ public class MultiPlayerPanel extends JComponent {
         initObjectGame();
         initKeyboard();
         initKeyboard2();
-        initKeyboard3();
         initBullets();
         initBullets2();
         
@@ -143,8 +143,7 @@ public class MultiPlayerPanel extends JComponent {
     }
     
     private void addArmy(){
-        Random ran = new Random();
-        int locationY=ran.nextInt(height-50)+25;
+        
         int setterHp = 0;
         if(cLevel==1){
           setterHp=50;
@@ -153,6 +152,9 @@ public class MultiPlayerPanel extends JComponent {
         }else if(cLevel==3){
           setterHp=100;
         }
+        
+        Random ran = new Random();
+        int locationY=ran.nextInt(height-50)+25;
         Army army= new Army(setterHp);
         army.changeLocation(0,locationY);
         army.changeAngle(0);
@@ -166,9 +168,7 @@ public class MultiPlayerPanel extends JComponent {
     }
     
     private void addArmy2(){
-        Random ran = new Random();
-        int locationY=ran.nextInt(height-50)+25;
-        int locationAngle = ran.nextInt(0, 30);
+        
         int setterHp = 0;
         if(cLevel==1){
           setterHp=50;
@@ -177,6 +177,10 @@ public class MultiPlayerPanel extends JComponent {
         }else if(cLevel==3){
           setterHp=100;
         }
+        
+        Random ran = new Random();
+        int locationY=ran.nextInt(height-50)+25;
+        int locationAngle = ran.nextInt(0, 30);
         Army army= new Army(setterHp);
         army.changeLocation(0,locationY);
         army.changeAngle(locationAngle);
@@ -191,9 +195,7 @@ public class MultiPlayerPanel extends JComponent {
     }
     
     private void addArmy3(){
-        Random ran = new Random();
-        int locationY=ran.nextInt(height-50)+25;
-        int locationAngle = ran.nextInt(315, 360);
+        
         int setterHp = 0;
         if(cLevel==1){
           setterHp=50;
@@ -202,6 +204,10 @@ public class MultiPlayerPanel extends JComponent {
         }else if(cLevel==3){
           setterHp=100;
         }
+        
+        Random ran = new Random();
+        int locationY=ran.nextInt(height-50)+25;
+        int locationAngle = ran.nextInt(315, 360);
         Army army= new Army(setterHp);
         army.changeLocation(0,locationY);
         army.changeAngle(locationAngle);
@@ -216,8 +222,7 @@ public class MultiPlayerPanel extends JComponent {
     }
     
     private void addTankBullet(){
-        Random random = new Random();
-        int locationY=random.nextInt(height-50)+25;
+        
         int setterAp = 0;
         if(cLevel==1){
           setterAp=10;
@@ -226,6 +231,9 @@ public class MultiPlayerPanel extends JComponent {
         }else if(cLevel==3){
           setterAp=20;
         }
+        
+        Random random = new Random();
+        int locationY=random.nextInt(height-50)+25;
         TankBullet tBullet= new TankBullet(setterAp); 
         Tank tank = new Tank();
         tank.changeLocation(0, locationY-30);
@@ -279,6 +287,7 @@ public class MultiPlayerPanel extends JComponent {
         player.changeLocation(360, 110);
         player2.changeLocation(360,355);
         player2.changeAngle(180);
+        
         armies = new ArrayList<>();
         tanks = new ArrayList<>();
         tBullets = new ArrayList<>();
@@ -334,21 +343,6 @@ public class MultiPlayerPanel extends JComponent {
         }).start();
     }
     
-    private void resetGame(){
-        score=0;
-        armies.clear();
-        bullets.clear();
-        bullets2.clear();
-        tanks.clear();
-        tBullets.clear();
-        player.reset();
-        player2.reset();
-        
-        bgMusic.play();
-        player.changeLocation(360,110);
-        player2.changeLocation(360,355);
-        player2.changeAngle(180);
-    }
     private void initKeyboard(){
         keyInput = new KeyInput();
         requestFocus();
@@ -458,7 +452,7 @@ public class MultiPlayerPanel extends JComponent {
                     
                     for(int i = 0; i <tBullets.size(); i++){
                         TankBullet tBullet = tBullets.get(i);
-                        if(tBullets != null){
+                        if(tBullet != null){
                             tBullet.update();
                             if (!tBullet.check(width, height)){
                                  tBullets.remove(tBullet);
@@ -593,7 +587,7 @@ public class MultiPlayerPanel extends JComponent {
                     for(int i = 0; i <tBullets.size(); i++){
                         TankBullet tBullet = tBullets.get(i);
                         
-                        if(tBullets != null){
+                        if(tBullet != null){
                             tBullet.update();
                             
                             if (!tBullet.check(width, height)){
@@ -606,45 +600,6 @@ public class MultiPlayerPanel extends JComponent {
                             }
                         }
                     }
-                    sleep(5);
-                }
-            }
-        }).start();
-    }
-    
-    private void initKeyboard3(){
-        keyInput = new KeyInput();
-        requestFocus();
-        addKeyListener(new KeyAdapter(){
-            
-            @Override
-            public void keyPressed(KeyEvent e){
-                int key = e.getKeyCode();
-                 if (key==KeyEvent.VK_ENTER){
-                    keyInput.setKey_enter(true);
-                }
-            }
-            
-            @Override
-            public void keyReleased(KeyEvent e){
-                int key = e.getKeyCode();
-                if (key==KeyEvent.VK_ENTER){
-                    keyInput.setKey_enter(false);
-                }
-            }
-        });
-        
-        new Thread(new Runnable(){
-            @Override
-            public void run(){
-
-                while(start){
-                    if(!player.getAlive()&&!player2.getAlive()){
-                        if(keyInput.isKey_enter()){
-                            resetGame();
-                        }
-                    }
-                    
                     sleep(5);
                 }
             }
@@ -796,7 +751,6 @@ public class MultiPlayerPanel extends JComponent {
                 area.intersect(army.getShape());
                 
                 if (!area.isEmpty()){
-                    double armyHp = army.getHP();
                     if(!army.updateHP(player.getHP())){
                      armies.remove(army);
                        if(cLevel==1){
@@ -846,7 +800,6 @@ public class MultiPlayerPanel extends JComponent {
                 area.intersect(army.getShape());
                 
                 if (!area.isEmpty()){
-                    double armyHp = army.getHP();
                     if(!army.updateHP(player2.getHP())){
                      armies.remove(army);
                        if(cLevel==1){
@@ -1156,8 +1109,10 @@ public class MultiPlayerPanel extends JComponent {
     private void render(){
         
        Graphics g = getGraphics();
-       g.drawImage(image, 0, 0, null);
-       g.dispose();
+       if(image!=null){
+         g.drawImage(image, 0, 0, null); 
+         g.dispose();
+       }
        
     }
     

@@ -22,7 +22,7 @@ public class BulletParent {
     private final Shape shape;
     private final Color color = new Color(229, 184, 11);
     private final float angle;
-    private double size;
+    private final double size;
     private float speed = 1f;
 
     
